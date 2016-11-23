@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rock Paper Scissors Game</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="content">
+		<div class="container-fluid">
+			<h1>Rock Paper Scissors</h1>
+			<form>
+				<input type="text" name="name" id="nameField">
+				<button type="submit" name="submit" id="nameButton">Name</button>
+			</form>
+			<section class="row">
+				<article class="col-md-5" >
+					<div class="choice" data-name="rock">
+						<p>Rock</p>
+					</div>
+					<div class="choice" data-name="paper">
+						<p>Paper</p>
+					</div>
+					<div class="choice" data-name="scissors">
+						<p>Scissors</p>
+					</div>
+				</article>
+				<article class="col-md-2">
+					
+				</article>
+				<article class="col-md-5">
+					<div class="choice" data-name="rock">
+						<p>Rock</p>
+					</div>
+					<div class="choice" data-name="paper">
+						<p>Paper</p>
+					</div>
+					<div class="choice" data-name="scissors">
+						<p>Scissors</p>
+					</div>
+				</article>
+			</section>
+			<section>
+				<article id="chatArea">
+					
+				</article>
+				<input type="text" name="name" id="chatField">
+				<button type="submit" name="submit" id="chatSubmit">Submit</button>
+			</section>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<p>footer</p>
+	</footer>
+	
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+	<script type="text/javascript" src= "javascript/app.js"></script>
+</body>
+</html>
