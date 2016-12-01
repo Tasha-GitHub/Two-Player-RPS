@@ -13,6 +13,7 @@
 
 var message;
 var choosePlayerOne = false;
+var choosePlayerTwo = false;
 
   // Get a reference to the database service
 var database = firebase.database();
@@ -37,26 +38,28 @@ database.ref("/player").on("value", function(snapshot) {
 $("#nameButton").on("click", function(event){
     	event.preventDefault();
     	name = $("#nameField").val().trim();
-    	 
-
-      //if users doesnt input both values, it will prevent a post
-      if(choosePlayerOne = false){
-      	database.ref("/player").push({
+    	 //stops from creating any more than two players
+      if(choosePlayerTwo === true){
+        return;
+      } else {
+        //if users doesnt input both values, it will prevent a post
+      if(choosePlayerOne === false){
+        database.ref("/player").push({
           name: name,
           playerID : "1",
         });
-
         choosePlayerOne = true;
 
-        
-
       } else {
-      	database.ref("/player").push({
+        database.ref("/player").push({
           name: name,
           playerID : "2",
         });
+        choosePlayerTwo = true;
       }
 
+      }
+      
     });
 
 
